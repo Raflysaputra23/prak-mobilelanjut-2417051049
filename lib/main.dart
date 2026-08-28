@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           title: const Text("PRAKTIKUM MOBILE LANJUT")
         ),
         body: const Center(
-          child: Text("Hello World sadada", style: TextStyle(fontSize: 24))
+          child: Text("Hello World", style: TextStyle(fontSize: 24))
         ),
       ),
     );
