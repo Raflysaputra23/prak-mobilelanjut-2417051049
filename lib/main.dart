@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:prakmola_rafly/first_widget.dart';
+// import 'package:prakmola_rafly/column_widget.dart';
+import 'package:prakmola_rafly/row_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,17 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Praktikum Mobile Lanjut',
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple
+        ),
+        useMaterial3: true
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("PRAKTIKUM MOBILE LANJUT")
-        ),
-        body: const Center(
-          child: Text("Hello World", style: TextStyle(fontSize: 24))
-        ),
+      home: const Center(
+        child: FisrtWidget(),
       ),
     );
   }
