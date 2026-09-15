@@ -7,7 +7,7 @@ class FisrtWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Row Widget"),
+        title: const Text("First Widget"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
