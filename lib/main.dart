@@ -1,30 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:prakmola_rafly/first_widget.dart';
-import 'package:prakmola_rafly/form_widget.dart';
-// import 'package:prakmola_rafly/column_widget.dart';
-// import 'package:prakmola_rafly/row_widget.dart';
+import 'package:prakmola_rafly/app_theme.dart';
+import 'package:prakmola_rafly/responsive_profile.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class _MyAppState extends State<MyApp> {
+  ThemeMode themeMode = ThemeMode.light;
+
+  void toggleTheme() {
+    setState(() {
+      themeMode = themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Praktikum Mobile Lanjut',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple
-        ),
-        useMaterial3: true
-      ),
-      home: const Center(
-        child: FormWidget(),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: "Praktikum Mobile Lanjut",
+      theme: AppTheme.ligthTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: themeMode,
+      home: ResponsiveProfile(onThemeChanged: toggleTheme)
     );
   }
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
 }
 
