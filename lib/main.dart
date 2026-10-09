@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prakmola_rafly/detail_page.dart';
+import 'package:prakmola_rafly/home_page.dart';
 import 'assets_media.dart';
 
 void main() {
@@ -11,6 +12,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return MaterialApp(
+    //   debugShowCheckedModeBanner: false,
+    //   title: 'Assets Media & Navigation',
+
+    //   theme: ThemeData(
+    //     useMaterial3: true,
+    //     fontFamily: 'Poppins',
+    //     colorScheme: ColorScheme.fromSeed(
+    //       seedColor: const Color(0xFF4D63D9),
+    //     ),
+    //   ),
+    //   initialRoute: '/',
+    //   routes: {
+    //     '/': (context) => const AssetsMediaPage(),
+    //     '/detail': (context) => const DetailPage()
+    //   },
+    //   // home: const AssetsMediaPage(),
+    // );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Assets Media & Navigation',
@@ -22,12 +41,8 @@ class MyApp extends StatelessWidget {
           seedColor: const Color(0xFF4D63D9),
         ),
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const AssetsMediaPage(),
-        '/detail': (context) => const DetaiPage()
-      },
-      // home: const AssetsMediaPage(),
+     
+      home: const HomePage(),
     );
   }
 }

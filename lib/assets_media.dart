@@ -88,7 +88,7 @@ class _AssetsMediaPageState extends State<AssetsMediaPage> {
                   children: [
                     ClipOval(
                       child: Image.asset(
-                        'assets/images/working.png',
+                        'assets/images/rafly.jpeg',
                         width: 120,
                         height: 120,
                         fit: BoxFit.cover,
